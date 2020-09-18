@@ -1,18 +1,25 @@
 <template>
   <div id="home" class="page">
     <top-bar/>
-    <category/>
+    <category :data="data"/>
+    <homepage-ad/>
+    <restaurants/>
   </div>
 </template>
 
 <script>
 import topBar from '../components/Home/top-bar'
 import category from '../components/Home/category'
+import homepageAd from '../components/Home/homepage-ad'
+import restaurants from '../components/Home/restaurants'
+
 import { mapState } from "vuex";
 export default {
   components:{
     topBar,
-    category
+    category,
+    homepageAd,
+    restaurants
   },
   computed: {
     ...mapState({
@@ -23,7 +30,7 @@ export default {
     requestData(){
     // console.log(111);
       this.$store.dispatch('home/requestEntriesList');
-      console.log(this.data);
+      this.$store.dispatch('home/requestRestaurnatsList');
     },
   },
   created(){
@@ -46,11 +53,11 @@ export default {
   flex-direction: column;
 }
 #category{
-  position: absolute;
-  top: 95px;
-  left: 0;
   width: 100%;
-  height: 177px;
-  background-color: #f00;
+}
+#homepage-ad{
+  width: 100%;
+  // height: 200px;
+  // background-color: #f00;
 }
 </style>
