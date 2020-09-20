@@ -1,9 +1,15 @@
 <template>
   <div id="home" class="page">
-    <top-bar/>
-    <category :data="data"/>
-    <homepage-ad/>
-    <restaurants/>
+    
+
+      <top-bar ref='top' :isTop='top'/>
+    <appScroll :handleScroll="handleScroll">
+      <category :data="entriesData"/>
+      <homepage-ad/>
+      <restaurants :data="restaurnatsData" :isTop='sortIsTop'/>
+    </appScroll>
+
+
   </div>
 </template>
 
@@ -12,6 +18,7 @@ import topBar from '../components/Home/top-bar'
 import category from '../components/Home/category'
 import homepageAd from '../components/Home/homepage-ad'
 import restaurants from '../components/Home/restaurants'
+import appScroll from '../components/common/app-scroll'
 
 import { mapState } from "vuex";
 export default {
@@ -19,11 +26,19 @@ export default {
     topBar,
     category,
     homepageAd,
-    restaurants
+    restaurants,
+    appScroll
+  },
+  data(){
+    return{
+      top:'0',
+      sortIsTop: '0',
+    }
   },
   computed: {
     ...mapState({
-      data: (state) => state.home.entriesData,
+      entriesData: (state) => state.home.entriesData,
+      restaurnatsData: (state) => state.home.restaurnatsData,
     })
   },
   methods:{
@@ -31,7 +46,23 @@ export default {
     // console.log(111);
       this.$store.dispatch('home/requestEntriesList');
       this.$store.dispatch('home/requestRestaurnatsList');
+    // console.log(this.restaurnatsData);
     },
+    handleScroll({x,y}){
+      // console.log(x,y);
+      this.top = y+'px';
+      // this.sortIsTop = y+'px'
+      if (y < -45){
+        // console.log(11);
+        this.top = -45+'px';
+      }
+      if (y < -440){
+        // console.log(11);
+        this.sortIsTop = -y-440 +'px'
+      }
+      // console.log(this.top);
+    }
+
   },
   created(){
     this.requestData();
@@ -51,6 +82,7 @@ export default {
   background-color: $theme-color;
   display: flex;
   flex-direction: column;
+  z-index: 10;
 }
 #category{
   width: 100%;
@@ -59,5 +91,8 @@ export default {
   width: 100%;
   // height: 200px;
   // background-color: #f00;
+}
+.scroll-view{
+  height: 100%;
 }
 </style>

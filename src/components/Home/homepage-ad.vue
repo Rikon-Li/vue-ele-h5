@@ -10,13 +10,11 @@
       </div>
       <div class="vip-bar">
         <p>
-
           <img src="https://cube.elemecdn.com/8/0e/4dd212d831becab6e3ebd484c0941jpeg.jpeg?x-oss-process=image/format,webp/resize,w_34" alt="">
           <b>超级会员 </b>
           <span>· 每月领20元红包</span>
         </p>
-          <i>限时1.99元开通</i>
-    
+        <i>限时1.99元开通</i>
       </div>
     </div>
   </div>

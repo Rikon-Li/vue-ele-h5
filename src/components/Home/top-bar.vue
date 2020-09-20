@@ -1,5 +1,6 @@
 <template>
-  <div id="top-bar">
+  <!-- <div id="top-bar" ref="topbar" :style="isTop?{top:'-45px'}:{top:'-0px'}"> -->
+  <div id="top-bar" ref="topbar" :style={top:isTop} >
     <div class="address-bar">
       <span class="iconfont icon-location"></span>
       <span>{{loc}}</span>
@@ -16,21 +17,35 @@
 
 <script>
 export default {
+  props:{
+    isTop:String
+  },
   data() {
     return {
       loc: "未能获取地址",
     };
   },
+  methods:{
+  },
+  mounted(){
+    // console.log(this.$refs.topbar.scrollTop);
+  }
+  
 };
 </script>
 
 <style lang="scss" scoped>
 @import "../../assets/global-style.scss";
+#top-bar{
+  position: absolute;
+  top: -90px;
+}
 .address-bar {
   display: flex;
   height: 45px;
   box-sizing: border-box;
   padding: 10px 14px 0;
+  
   span {
     margin-right: 5px;
     line-height: 30px;
@@ -50,6 +65,7 @@ export default {
   justify-content: center;
   align-items: center;
   height: 50px;
+  
   p {
     background-color: #fff;
     display: flex;

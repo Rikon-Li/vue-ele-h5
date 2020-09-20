@@ -40,6 +40,7 @@ export default {
   align-items: center;
   background-color: #fff;
   box-shadow: 0px -1px 2px rgba(0,0,0,.1);
+  z-index: 10;
   .menu-item {
     flex: 1;
     height: 50px;
