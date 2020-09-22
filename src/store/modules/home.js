@@ -44,11 +44,11 @@ export default{
       const data = await http.get(RESTAURANTS_API);
       // console.log(data);
       const {data: {items}} = await http.get(RESTAURANTS_API);
-      console.log(items);
+      // console.log(items);
       const result = items.map(item=>({
         id: item.restaurant.id,
         name: item.restaurant.name,
-        image_path: `https://cube.elemecdn.com/${item.restaurant.image_path.slice(0, 1) + '/' + item.restaurant.image_path.slice(1, 3) + '/' + item.restaurant.image_path.slice(3)}.jpeg?x-oss-process=image/format,webp/resize,w_130,h_130,m_fixed`,
+        image_path: `https://cube.elemecdn.com/${item.restaurant.image_path.slice(0, 1) + '/' + item.restaurant.image_path.slice(1, 3) + '/' + item.restaurant.image_path.slice(3) + '.' + item.restaurant.image_path.match(/(jpeg|png|JPEG)/g)}?x-oss-process=image/format,webp/resize,w_130,h_130,m_fixed`,
         rating: item.restaurant.rating,
         recent_order_num: item.restaurant.recent_order_num,
         piecewise_agent_fee: {
@@ -64,7 +64,7 @@ export default{
         },
         supports: item.restaurant.supports[0],
       }));
-      console.log(result);
+      // console.log(result);
       context.commit('setRestaurnatsData',result);
       // 重置loading
       context.commit('setRestaurnatsLoading', false);

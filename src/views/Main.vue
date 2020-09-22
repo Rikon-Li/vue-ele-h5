@@ -29,6 +29,9 @@ export default {
 
 <style lang="scss" scoped>
 @import '../assets/global-style.scss';
+#main{
+  height: 100%;
+}
 .menu {
   position: absolute;
   bottom: 0;
@@ -40,7 +43,7 @@ export default {
   align-items: center;
   background-color: #fff;
   box-shadow: 0px -1px 2px rgba(0,0,0,.1);
-  z-index: 10;
+  z-index: 100;
   .menu-item {
     flex: 1;
     height: 50px;

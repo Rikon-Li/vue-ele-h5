@@ -3,16 +3,16 @@
     
     <div class="shoplist-title"><span>推荐商家</span></div>
     <div class="sort-bar">
-      <ul class="sort-bar-items" :style={top:isTop}>
-        <li>综合排序<span class="iconfont icon-caret-bottom"></span></li>
+      <ul class="sort-bar-items">
+        <li @click="sortShow">综合排序<span class="iconfont icon-caret-bottom"></span></li>
         <li>距离最近</li>
         <li>销量最高</li>
-        <li>筛选<span class="iconfont icon-sort"></span></li>
+        <li @click="filterShow">筛选<span class="iconfont icon-sort"></span></li>
       </ul>
     </div>
     <div class="restaurants-list">
       <ul class="restaurants-items">
-        <li class="restaurants-item" v-for="item in data" :key="item.id">
+        <li @click="showDetail" class="restaurants-item" v-for="item in data" :key="item.id">
           <!-- {{item}} -->
           <div class="restaurant-wrap">
             <img :src="item.image_path" alt="" class="img">
@@ -20,16 +20,16 @@
               <h3 class="name">{{item.name}}</h3>
               <p class="rating">
                 <span>
-
                   <van-rate 
-                    v-model="value" 
+                    v-model="item.rating" 
                     color="#ffd21e"
                     size="15px"
+                    allow-half
                     readonly
                   />
                   <span>{{item.rating}}</span>
                 </span>
-                <span>蜂鸟专送</span>
+                <span class="fnzs">蜂鸟专送</span>
               </p>
               <p class="delivery">
                 <span>
@@ -40,9 +40,7 @@
                 </span>
               </p>
               <span class="flavors">{{item.flavors}}</span> 
-
             </div>
-            
           </div>
         </li>
       </ul>
@@ -60,10 +58,23 @@ export default {
       value: 3.7
     }
   },
-
   props:{
     data: Array,
-    isTop: String
+    // isTop: String
+  },
+  methods:{
+    sortShow(){
+      // this.$parent.scrollToSort();
+      // // this.$parent.shadedOn();
+      // console.log(this.$parent);
+      this.$emit('sortShowAction');
+    },
+    filterShow(){
+      this.$emit('filterShowAction');
+    },
+    showDetail(){
+      this.$router.push('detail');
+    }
   }
 }
 </script>
@@ -139,6 +150,14 @@ export default {
       line-height: 25px;
       display: flex;
       justify-content: space-between;
+      .fnzs{
+        color: #fff;
+        line-height: 18px;
+        height: 16px;
+        padding: 0 2px;
+        background-color: $theme-color;
+        border-radius: 3px;
+      }
     }
     .delivery{
       width: 100%;

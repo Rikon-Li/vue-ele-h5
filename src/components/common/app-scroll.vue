@@ -24,6 +24,11 @@ export default {
       default: '100%'
     }
   },
+  methods: {
+    scrollToSort(){
+      this.scroll.scrollTo(0, -500, 50);
+    }
+  },
   computed: {
     // 计算最终宽度的样式
     wrapWidth(){
@@ -35,7 +40,7 @@ export default {
     }
   },
   mounted(){
-    const scroll = new IScroll(this.$refs.scroll, {
+    const scroll = this.scroll = new IScroll(this.$refs.scroll, {
       tap: true,
       click: true,
       probeType: 3,
