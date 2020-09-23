@@ -1,26 +1,29 @@
 <template>
   <div id="detail">
+    <appScroll class="scroll">
     <div class="top">
-      <div class="background" style="background-image: url('https://cube.elemecdn.com/5/99/5c8409b6a9d7c3f05fad9da84fc86png.png?x-oss-process=image/format,webp/resize,w_750');">
+      <div class="background" :style="{backgroundImage: 'url('+rstData.bg_path+')'}">
         <div><span class="iconfont icon-arrow-left"></span></div>
-        <img class="shopLogo" src="https://cube.elemecdn.com/5/35/ad5c50300565b5e6371ee8accb131JPEG.JPEG">
+        <img class="shopLogo" :src="rstData.image_path">
       </div>
       <div class="shopDetails">
-        <h1 class="name">益禾堂</h1>
+        <h1 class="name">{{rstData.name}}</h1>
         <ul class="more">
-          <li>评价4.2</li>
-          <li>月售221单</li>
-          <li>蜂鸟快送约40分钟</li>
+          <li>评价{{rstData.rating}}</li>
+          <li>月售{{rstData.recent_order_num}}单</li>
+          <li>蜂鸟快送约{{rstData.order_lead_time}}分钟</li>
         </ul>
-        <span class="notice">公告。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。</span>
+        <span class="notice">公告: {{rstData.promotion_info}}</span>
       </div>
       <div class="tabs">
         <div class="tabWrap" v-for="(item, index) in tabsItems" @click=switchTabs(item,index) :key=index ><span class="tab" :class="selectedTab === item ? 'Active' : ''">{{item}}</span></div>
       </div>
     </div>
-    <orderFood v-show="selectedTab === '点餐'"/>
+    <orderFood v-show="selectedTab === '点餐'" :data='menuData'/>
     <evaluate v-show="selectedTab === '评价'"/>
     <shopInfo v-show="selectedTab === '商家'"/>
+    </appScroll>
+
     <div class="bottom">
       <div class="bottomWrap">
         <div class="cartButton"></div>
@@ -32,6 +35,7 @@
       <div class="account">去结算</div>
     </div>
     
+    
   </div>
 </template>
 
@@ -39,6 +43,7 @@
 import orderFood from '../components/Detail/order-food'
 import evaluate from '../components/Detail/evaluate'
 import shopInfo from '../components/Detail/shop-info'
+import appScroll from '../components/common/app-scroll'
 
 import { mapState } from "vuex";
 export default {
@@ -51,12 +56,16 @@ export default {
   computed: {
     ...mapState({
       shopData: (state) => state.detail.shopData,
+      menuData: (state) => state.detail.menuData,
+      recommendData: (state) => state.detail.recommendData,
+      rstData: (state) => state.detail.rstData,
     })
   },
   components:{
     orderFood,
     evaluate,
-    shopInfo
+    shopInfo,
+    appScroll,
   },
   methods:{
     requestData(){
@@ -69,9 +78,15 @@ export default {
   created(){
     this.requestData();
   },
-  mounted(){
-    console.log(this.shopData);
-  }
+  // mounted(){
+  //   setTimeout(()=>{
+
+  //     console.log(this.shopData);
+  //     console.log(this.menuData);
+  //     console.log(this.recommendData);
+  //     console.log(this.rstData);
+  //   },2000)
+  // }
 }
 </script>
 
@@ -230,5 +245,8 @@ export default {
       background-color: #41C976;
     }
   }
+}
+.scroll{
+  height: 100%;
 }
 </style>
