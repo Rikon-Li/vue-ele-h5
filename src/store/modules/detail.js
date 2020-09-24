@@ -17,15 +17,17 @@ export default{
       state.shopData = data;
       state.menuData = data.menu.map(item=>({
         name: item.name,
-        foods: item.foods.map(item=>({
-          name: item.name,
-          description: item.description,
-          month_sales: item.month_sales,
-          satisfy_rate: item.satisfy_rate,
-          discount_rate: item.discount_rate,
-          origin_price: item.origin_price,
-          price: item.price,
-          image_path: `https://cube.elemecdn.com/${item.image_path.slice(0, 1) + '/' + item.image_path.slice(1, 3) + '/' + item.image_path.slice(3) + '.' + item.image_path.match(/(jpeg|jpg|png|JPEG)/g)}?x-oss-process=image/format,webp/resize,w_130,h_130,m_fixed`,
+        id: item.id,
+        foods: item.foods.map(food=>({
+          category_id: food.category_id,
+          name: food.name,
+          description: food.description,
+          month_sales: food.month_sales,
+          satisfy_rate: food.satisfy_rate,
+          discount_rate: food.discount_rate,
+          origin_price: food.origin_price,
+          price: food.price,
+          image_path: `https://cube.elemecdn.com/${food.image_path.slice(0, 1) + '/' + food.image_path.slice(1, 3) + '/' + food.image_path.slice(3) + '.' + food.image_path.match(/(jpeg|jpg|png|JPEG)/g)}?x-oss-process=image/format,webp/resize,w_130,h_130,m_fixed`,
         })),
       }))
       state.recommendData = data.recommend;
