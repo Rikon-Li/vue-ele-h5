@@ -37,7 +37,7 @@
     </div>
     <div class="payPage" v-if="showPay">
       <div class="payHeader">
-        <span class="iconfont icon-arrow-left"></span>确认订单<span></span>
+        <span class="iconfont icon-arrow-left"></span><span>确认订单</span>
       </div>
       <div class="payContent"></div>
       <div class="payFooter"></div>
@@ -58,7 +58,7 @@ export default {
     return{
       tabsItems: ['点餐','评价','商家'],
       selectedTab: '点餐',
-      showPay: false,
+      showPay: true,
     }
   },
   computed: {
@@ -269,6 +269,27 @@ export default {
     background-color: #fff;
     left: 0;
     top: 0;
+    .payHeader{
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 44px;
+      background: #2395FF;
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      span{
+        font-size: 18px;
+      }
+      .iconfont{
+        position: absolute;
+        font-size: 20px;
+        left: 15px;
+        top: 15px;
+      }
+    }
   }
 }
 .scroll{
