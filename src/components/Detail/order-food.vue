@@ -17,10 +17,14 @@
               <img :src="food.image_path" alt="">
               <div class="foodDetail">
                 <h3 class="name">{{food.name}}</h3>
-                <p class="description">{{food.description}}</p>
+                <p class="description"><span>{{food.description}}</span></p>
                 <p><span class="month_sale">月售{{food.month_sales}}份</span><span class="satisfy_rate">好评率{{food.satisfy_rate}}%</span></p>
                 <p><span class="discount_rate">{{food.discount_rate}}折</span><span class="limit">每单限1份优惠</span></p>
-                <p><span class="price">¥{{food.price}}</span><span class="origin">¥{{food.origin_price}}</span></p>
+                <p>
+                  <span class="price">¥{{food.price}}</span>
+                  <span class="origin">¥{{food.origin_price}}</span>
+                  <span class="addCart" @click="addCart(food.category_id,food.item_id)">加入购物车</span>
+                </p>
               </div>
             </div>
           </li>
@@ -35,6 +39,7 @@
   
 <script>
 import appScroll from "../../components/common/app-scroll";
+import { mapState,mapMutations } from "vuex"
 
 export default {
   data(){
@@ -48,18 +53,58 @@ export default {
   props: {
     data: Array,
   },
+  computed: {
+    ...mapState({
+      menuData: (state) => state.detail.shopData,
+      shopList: (state) => state.cart.shopList
+    })
+  },
   methods: {
+    ...mapMutations({
+      setShopList: 'cart/setShopList' ,
+      addShopList: 'cart/addShopList' ,
+    }),
     selectCategory(id){
       this.selectedID = id;
       console.log(id);
+    },
+    addCart(category_id, item_id){
+      let flag = false;
+      this.menuData.menu.forEach(firstRoundItem => {
+        if( firstRoundItem.id === category_id ){
+          firstRoundItem.foods.forEach(secondRoundItem => {
+            if(secondRoundItem.item_id === item_id ){
+              this.shopList.forEach( (element, index) => {
+                if (element.id === item_id){
+                  console.log(index);
+                  // const tempItem = this.shopList[index].num + 1;
+                  this.addShopList(index);
+                  flag = true;
+                  console.log(this.shopList); 
+                }
+              })
+              if (!flag){
+                const newItem = {'id':secondRoundItem.item_id, 'name':secondRoundItem.name, num:'1', price:secondRoundItem.price};
+                this.setShopList(newItem);
+                console.log(this.shopList); 
+              }
+            }
+          })
+        }
+      });
+      // console.log(category_id);
+      // this.setShopList();
+      // setTimeout(()=>{
+        // console.log(this.shopList);
+      // },0)
     }
   }
 };
 </script>
   
  
+ 
 <style lang="scss" scoped>
-@import "../../assets/global-style.scss";
 #order-food {
   // height: 100%;
   width: 100%;
@@ -103,11 +148,13 @@ export default {
       background-color: #fff;
       .food{
         display: flex;
+        margin: 10px 0;
         img{
           width: 95px;
           height: 95px;
         }
         .foodDetail{
+          padding: 0 5px; 
           width: 170px;
           display: flex;
           flex-direction: column;
@@ -115,9 +162,14 @@ export default {
 
           p{
             height: 20px;
-            overflow:hidden;
-            text-overflow: ellipsis; 
-            white-space: nowrap;
+            display: flex;
+            align-items: center;
+            position: relative;
+            span{
+              overflow:hidden;
+              text-overflow: ellipsis; 
+              white-space: nowrap;
+            }
           }
           .name{
             font-size: 15px;
@@ -126,12 +178,14 @@ export default {
             overflow:hidden;
             text-overflow: ellipsis; 
             white-space: nowrap;
+            margin-bottom: 5px;
           }
           .description{
             font-size: 10px;
           }
           .month_sale, .satisfy_rate{
             font-size: 10px;
+            margin-right: 10px;
           }
           .discount_rate{
             line-height: 12px;
@@ -139,6 +193,7 @@ export default {
             padding: 0 2px;
             border: 1px solid #FF5339;
             color: #FF5339;
+            margin-right: 10px;
           }
           .limit{
             font-size: 10px;
@@ -147,9 +202,21 @@ export default {
           .price{
             font-size: 15px;
             color: #FF5339;
+            margin-right: 10px;
           }
           .origin{
             text-decoration: line-through;
+          }
+          .addCart{
+            position: absolute;
+            right: 0;
+            font-size: 12px;
+            height: 20px;
+            background-color: #3892E5;
+            color: #fff;
+            line-height: 20px;
+            padding: 0 10px;
+            border-radius: 10px;
           }
         }
       }

@@ -41,8 +41,7 @@ export default {
   },
   mounted(){
     const scroll = this.scroll = new IScroll(this.$refs.scroll, {
-      tap: true,
-      click: true,
+
       probeType: 3,
       scrollX: this.scrollX,
       scrollY: this.scrollY

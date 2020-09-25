@@ -28,11 +28,11 @@
       <div class="bottomWrap">
         <div class="cartButton"></div>
         <div class="totalPrice">
-          <p><span class="actualPrice">¥69</span><span class="originalPrice">¥88.6</span></p>
+          <p><span class="actualPrice">¥{{this.total}}</span><span class="originalPrice">¥88.6</span></p>
           <p>另需配送费9元</p>
         </div>
       </div>
-      <div class="account">去结算</div>
+      <div class="account" @click="payAction">去结算</div>
     </div>
     
     
@@ -45,7 +45,7 @@ import evaluate from '../components/Detail/evaluate'
 import shopInfo from '../components/Detail/shop-info'
 import appScroll from '../components/common/app-scroll'
 
-import { mapState } from "vuex";
+import { mapState, mapMutations } from "vuex";
 export default {
   data(){
     return{
@@ -59,6 +59,8 @@ export default {
       menuData: (state) => state.detail.menuData,
       recommendData: (state) => state.detail.recommendData,
       rstData: (state) => state.detail.rstData,
+      shopList: (state) => state.cart.shopList,
+      total: (state) => state.cart.total,
     })
   },
   components:{
@@ -68,11 +70,17 @@ export default {
     appScroll,
   },
   methods:{
+    ...mapMutations({
+      transAction: 'cart/transAction' ,
+    }),
     requestData(){
       this.$store.dispatch('detail/requestShopData');
     },
     switchTabs(tabName,index){
       this.selectedTab = tabName;
+    },
+    payAction(){
+      this.transAction();
     }
   },
   created(){

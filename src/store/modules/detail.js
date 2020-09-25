@@ -20,6 +20,7 @@ export default{
         id: item.id,
         foods: item.foods.map(food=>({
           category_id: food.category_id,
+          item_id: food.item_id,
           name: food.name,
           description: food.description,
           month_sales: food.month_sales,
@@ -41,7 +42,7 @@ export default{
         promotion_info: data.rst.promotion_info,
         posters_image_path: `https://cube.elemecdn.com/${data.rst.posters[0].image_hash.slice(0, 1) + '/' + data.rst.posters[0].image_hash.slice(1, 3) + '/' + data.rst.posters[0].image_hash.slice(3) + '.' + data.rst.posters[0].image_hash.match(/(jpeg|png|JPEG)/g)}?x-oss-process=image/format,webp/resize,w_130,h_130,m_fixed`,
       };
-      console.log(state.menuData);
+      // console.log(state.menuData);
     },
   },
   actions: {
