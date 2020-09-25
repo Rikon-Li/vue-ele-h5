@@ -33,8 +33,15 @@
         </div>
       </div>
       <div class="account" @click="payAction">去结算</div>
+      
     </div>
-    
+    <div class="payPage" v-if="showPay">
+      <div class="payHeader">
+        <span class="iconfont icon-arrow-left"></span>确认订单<span></span>
+      </div>
+      <div class="payContent"></div>
+      <div class="payFooter"></div>
+    </div>
     
   </div>
 </template>
@@ -51,6 +58,7 @@ export default {
     return{
       tabsItems: ['点餐','评价','商家'],
       selectedTab: '点餐',
+      showPay: false,
     }
   },
   computed: {
@@ -81,6 +89,7 @@ export default {
     },
     payAction(){
       this.transAction();
+      this.showPay = true;
     }
   },
   created(){
@@ -252,6 +261,14 @@ export default {
       color: #fff;
       background-color: #41C976;
     }
+  }
+  .payPage{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-color: #fff;
+    left: 0;
+    top: 0;
   }
 }
 .scroll{
