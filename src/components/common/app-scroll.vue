@@ -26,7 +26,7 @@ export default {
   },
   methods: {
     scrollToSort(){
-      this.scroll.scrollTo(0, -500, 50);
+      this.scroll.scrollTo(0, -1000, 100);
     }
   },
   computed: {

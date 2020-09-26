@@ -115,8 +115,8 @@ export default {
     },
     handleScroll({x,y}){
       this.top = y+'px';
-      if (y < -45){
-        this.top = -45+'px';
+      if (y < -90){
+        this.top = -90+'px';
       } 
       const FontSize = parseInt (document.documentElement.style.fontSize);
       if (y < -443*FontSize/37.5){

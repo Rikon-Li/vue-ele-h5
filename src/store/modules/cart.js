@@ -4,6 +4,9 @@ export default{
     shopList: [],
     total: 0,
     orderList: [],
+    billTotal:0,
+    currentInfo: {},
+    billList: [],
   },
   mutations: {
     setShopList(state, payload){
@@ -21,9 +24,23 @@ export default{
       })
     },
     transAction(state){
-      state.orderList = state.shopList;
+      state.shopList.map(item=>{
+        item.date = new Date().toLocaleString();
+        state.orderList.push(item)
+      })
+      // state.orderList = state.shopList;
       state.shopList = [];
+
+    },
+    setBillInfo(state, payload){
+      state.currentInfo = payload;
+    },
+    setBillList(state){
+      state.currentInfo.time = new Date().toLocaleString();
+      state.currentInfo.total = state.total;      
+      // state.billTotal = state.total;
       state.total = 0;
+      state.billList.push(state.currentInfo)
     }
   },
   actions: {},

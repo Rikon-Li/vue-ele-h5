@@ -32,15 +32,38 @@
           <p>另需配送费9元</p>
         </div>
       </div>
-      <div class="account" @click="payAction">去结算</div>
+      <div class="account" @click="showBill">去结算</div>
       
     </div>
     <div class="payPage" v-if="showPay">
       <div class="payHeader">
-        <span class="iconfont icon-arrow-left"></span><span>确认订单</span>
+        <span @click="hideBill" class="iconfont icon-arrow-left"></span><span>确认订单</span>
       </div>
-      <div class="payContent"></div>
-      <div class="payFooter"></div>
+      <div class="payContent">
+        <div class="payWrap">
+          <div class="addInfoWrap">
+            <div class="addInfo">
+              <p class="deliveryTo">订单配送至</p>
+              <p class="adds">兴围村-南区十一巷</p>
+              <p><span class="name">李根(先生)</span><span class="tel">15779078678</span></p>
+            </div>
+          </div>
+          <div class="orderList">
+            <div class="shopTitle">{{currentInfo.rst_name}}</div>
+            <div class="foods" v-for="item in shopList" :key="item.id">
+              <img :src="item.image_path" alt="">
+              <span class="name">{{item.name}}</span>
+              <span class="num">x{{item.num}}</span>
+              <span class="price">¥{{item.price}}</span>
+            </div>
+            <div class="total">小计：{{total}}元</div>
+          </div>
+        </div>
+      </div>
+      <div class="payFooter">
+        <div class="price">¥{{total}}</div>
+        <div @click="payBill()" class="payBill">去支付</div>
+      </div>
     </div>
     
   </div>
@@ -58,7 +81,7 @@ export default {
     return{
       tabsItems: ['点餐','评价','商家'],
       selectedTab: '点餐',
-      showPay: true,
+      showPay: false,
     }
   },
   computed: {
@@ -69,6 +92,9 @@ export default {
       rstData: (state) => state.detail.rstData,
       shopList: (state) => state.cart.shopList,
       total: (state) => state.cart.total,
+      orderList: (state) => state.cart.orderList,
+      billTotal: (state) => state.cart.billTotal,
+      currentInfo: (state) => state.cart.currentInfo,
     })
   },
   components:{
@@ -80,6 +106,7 @@ export default {
   methods:{
     ...mapMutations({
       transAction: 'cart/transAction' ,
+      setBillList: 'cart/setBillList' ,
     }),
     requestData(){
       this.$store.dispatch('detail/requestShopData');
@@ -87,23 +114,22 @@ export default {
     switchTabs(tabName,index){
       this.selectedTab = tabName;
     },
-    payAction(){
-      this.transAction();
+    showBill(){
       this.showPay = true;
+    },
+    hideBill(){
+      this.showPay = false;
+    },
+    payBill(){
+      this.hideBill();
+      this.transAction();
+      this.$router.push('orders')
+      this.setBillList();
     }
   },
   created(){
     this.requestData();
   },
-  // mounted(){
-  //   setTimeout(()=>{
-
-  //     console.log(this.shopData);
-  //     console.log(this.menuData);
-  //     console.log(this.recommendData);
-  //     console.log(this.rstData);
-  //   },2000)
-  // }
 }
 </script>
 
@@ -288,6 +314,114 @@ export default {
         font-size: 20px;
         left: 15px;
         top: 15px;
+      }
+    }
+    .payContent{  
+      height: 100%;
+      width: 100%;
+      box-sizing: border-box;
+      padding: 44px 0;
+      .payWrap{
+        height: 100%;
+        width: 100%;
+        background-image: linear-gradient(0deg,#f5f5f5,#f5f5f5 65%,hsla(0,0%,96%,.3) 75%,hsla(0,0%,96%,0)),linear-gradient(270deg,#0085ff,#0af);
+        .addInfoWrap{ 
+          display: flex;
+          padding: 10px 15px;
+          box-sizing: border-box;
+          width: 100%;
+          height: 107px;
+          // background-color: #fff;
+          .addInfo{
+            p{
+              font-size: 14px;
+              color: #FFF;
+              margin: 10px 0;
+            }
+            .adds{
+              font-size: 22px;
+            }
+          }
+        }
+        .orderList{
+          margin: 0 5px;
+          padding: 0 20px;
+          background-color: #fff;
+          color: #333;
+          .shopTitle{
+            height: 48px;
+            font-size: 17px;
+            font-weight: 700;
+            border-bottom: 2px solid #e6e6e6;
+            display: flex;
+            align-items: center;
+            box-sizing: border-box;
+          }
+          .foods{
+            border-bottom: 1px solid #eee;
+            display: flex;
+            align-items: center;
+            height: 30px;
+            padding: 12px 0;
+            img{
+              width: 36px;
+              height: 36px;
+            }
+            .name{
+              width: 150px;
+              margin-left: 10px;
+              font-size: 14px;
+              font-weight: 500;
+            }
+            .num{
+              margin: 0 20px;
+              width: 30px;
+            }
+            .price{
+              margin: 0 20px;
+              width: 30px;
+              color: #FF4A07;
+              font-size: 16px;
+            }
+          }
+          .total{
+            height: 48px;
+            font-size: 17px;
+            font-weight: 700;
+            border-bottom: 2px solid #e6e6e6;
+            display: flex;
+            align-items: center;
+            box-sizing: border-box;
+          }
+        }
+      }
+    }
+    .payFooter{
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      height: 44px;
+      width: 100%;
+      background-color: #3C3C3C;
+      .price{
+        height: 100%;
+        line-height: 44px;
+        padding: 0 20px;
+        font-size: 18px;
+        color: #FFF;
+      }
+      .payBill{
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        height: 44px;
+        width: 110px;
+        color: #FFF;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 17px;
+        background-color: #00E067;
       }
     }
   }

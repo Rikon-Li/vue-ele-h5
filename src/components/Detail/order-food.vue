@@ -23,8 +23,9 @@
                 <p>
                   <span class="price">¥{{food.price}}</span>
                   <span class="origin">¥{{food.origin_price}}</span>
-                  <span class="addCart" @click="addCart(food.category_id,food.item_id)">加入购物车</span>
+                  <span class="addCart" @click="addCart({'category_id':food.category_id,'item_id':food.item_id,'name': food.name,'image_path': food.image_path, 'price': food.price},item.rst_name,item.rst_img)">加入购物车</span>
                 </p>
+                
               </div>
             </div>
           </li>
@@ -56,47 +57,35 @@ export default {
   computed: {
     ...mapState({
       menuData: (state) => state.detail.shopData,
-      shopList: (state) => state.cart.shopList
+      shopList: (state) => state.cart.shopList,
     })
   },
   methods: {
     ...mapMutations({
       setShopList: 'cart/setShopList' ,
       addShopList: 'cart/addShopList' ,
+      setBillInfo: 'cart/setBillInfo'
     }),
     selectCategory(id){
       this.selectedID = id;
       console.log(id);
     },
-    addCart(category_id, item_id){
+    addCart( food, rst_name, rst_img ){
+      var shopInfo = {'rst_name':rst_name, 'rst_img': rst_img}
+      this.setBillInfo(shopInfo);
       let flag = false;
-      this.menuData.menu.forEach(firstRoundItem => {
-        if( firstRoundItem.id === category_id ){
-          firstRoundItem.foods.forEach(secondRoundItem => {
-            if(secondRoundItem.item_id === item_id ){
-              this.shopList.forEach( (element, index) => {
-                if (element.id === item_id){
-                  console.log(index);
-                  // const tempItem = this.shopList[index].num + 1;
-                  this.addShopList(index);
-                  flag = true;
-                  console.log(this.shopList); 
-                }
-              })
-              if (!flag){
-                const newItem = {'id':secondRoundItem.item_id, 'name':secondRoundItem.name, num:'1', price:secondRoundItem.price};
-                this.setShopList(newItem);
-                console.log(this.shopList); 
-              }
-            }
-          })
+      this.shopList.forEach( (element, index) => {
+        if (food.item_id === element.id){
+          this.addShopList(index);
+          flag = true;
+          // console.log(this.shopList); 
         }
-      });
-      // console.log(category_id);
-      // this.setShopList();
-      // setTimeout(()=>{
-        // console.log(this.shopList);
-      // },0)
+      })
+      if (!flag){
+        const newItem = {'id':food.item_id, 'name':food.name, num:'1', price:food.price, image_path: food.image_path};
+        this.setShopList(newItem);
+        // console.log(this.shopList); 
+      }
     }
   }
 };

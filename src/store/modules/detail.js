@@ -18,8 +18,9 @@ export default{
       state.menuData = data.menu.map(item=>({
         name: item.name,
         id: item.id,
-        foods: item.foods.map(food=>({
-          category_id: food.category_id,
+        rst_name: data.rst.name,
+        rst_img: `https://cube.elemecdn.com/${data.rst.image_path.slice(0, 1) + '/' + data.rst.image_path.slice(1, 3) + '/' + data.rst.image_path.slice(3) + '.' + data.rst.image_path.match(/(jpeg|png|JPEG)/g)}?x-oss-process=image/format,webp/resize,w_130,h_130,m_fixed`,
+        foods: item.foods.map(food=>({category_id: food.category_id,
           item_id: food.item_id,
           name: food.name,
           description: food.description,
