@@ -35,6 +35,10 @@ export default{
       state.recommendData = data.recommend;
       state.rstData = {
         name : data.rst.name,
+        address: data.rst.address,
+        flavors: data.rst.flavors,
+        opening_hours: data.rst.opening_hours,
+        supports: data.rst.supports,
         image_path: `https://cube.elemecdn.com/${data.rst.image_path.slice(0, 1) + '/' + data.rst.image_path.slice(1, 3) + '/' + data.rst.image_path.slice(3) + '.' + data.rst.image_path.match(/(jpeg|png|JPEG)/g)}?x-oss-process=image/format,webp/resize,w_130,h_130,m_fixed`,
         bg_path: `https://cube.elemecdn.com/${data.rst.shop_sign.image_hash.slice(0, 1) + '/' + data.rst.shop_sign.image_hash.slice(1, 3) + '/' + data.rst.shop_sign.image_hash.slice(3) + '.' + data.rst.shop_sign.image_hash.match(/(jpeg|png|JPEG)/g)}?x-oss-process=image/format,webp/resize,w_750`,
         rating: data.rst.rating,

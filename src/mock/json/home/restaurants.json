@@ -6,6 +6,144 @@
                 "act_tag": 0,
                 "activities": [
                     {
+                        "attribute": "{0:{\"content\":\"8\",\"type\":4}}",
+                        "background": {
+                            "rgb_from": "#FFFFFF",
+                            "rgb_to": "#FFFFFF"
+                        },
+                        "border": "#FFC9C1",
+                        "description": "特价商品8元起",
+                        "icon_color": "f1884f",
+                        "icon_name": "特",
+                        "id": 23576802971,
+                        "image_hash": null,
+                        "is_exclusive_with_food_activity": true,
+                        "is_top": null,
+                        "name": "特价商品",
+                        "text_color": "#FF4B33",
+                        "tips": "特价商品8元起",
+                        "type": 502
+                    }
+                ],
+                "address": null,
+                "authentic_id": 1010323,
+                "average_cost": null,
+                "baidu_id": null,
+                "bidding": null,
+                "brand_id": 4771,
+                "business_info": "{\"pickup_scheme\":\"https://h5.ele.me/shop/#id=E14879063539935879807\",\"ad_info\":{\"isAd\":\"false\"},\"recent_order_num_display\":\"月售521\"}",
+                "closing_count_down": 0,
+                "delivery_fee_discount": 0.0,
+                "delivery_mode": null,
+                "description": "KFC",
+                "distance": 360,
+                "favor_time": null,
+                "favored": false,
+                "flavors": [
+                    {
+                        "id": 212,
+                        "name": "汉堡薯条"
+                    },
+                    {
+                        "id": 234,
+                        "name": "炸鸡炸串"
+                    }
+                ],
+                "float_delivery_fee": 9.0,
+                "float_minimum_order_amount": 0.0,
+                "folding_restaurant_brand": null,
+                "folding_restaurants": [],
+                "has_story": false,
+                "id": "E14879063539935879807",
+                "image_path": "E7465F5C49EC4E50A6CCBABF02216946jpeg",
+                "is_new": false,
+                "is_premium": true,
+                "is_star": false,
+                "is_stock_empty": 0,
+                "is_valid": 1,
+                "latitude": 22.63774508,
+                "longitude": 113.83196737,
+                "max_applied_quantity_per_order": -1,
+                "name": "肯德基宅急送（兴围店）",
+                "next_business_time": "",
+                "only_use_poi": null,
+                "opening_hours": [
+                    "0:00/23:59"
+                ],
+                "order_lead_time": 30,
+                "out_of_range": false,
+                "phone": null,
+                "piecewise_agent_fee": {
+                    "description": "配送¥9",
+                    "extra_fee": 0.0,
+                    "is_extra": false,
+                    "no_subsidy_fee": "",
+                    "rules": [
+                        {
+                            "fee": 9.0,
+                            "price": 0.0
+                        }
+                    ],
+                    "tips": "配送¥9"
+                },
+                "platform": 0,
+                "posters": [],
+                "promotion_info": "欢迎光临肯德基宅急送，专业外送，全程保温，准时送达！",
+                "rating": 4.5,
+                "rating_count": 1319,
+                "recent_order_num": 521,
+                "recommend": {
+                    "is_ad": false,
+                    "reason": ""
+                },
+                "recommend_reasons": [
+                    {
+                        "name": "配送飞快"
+                    }
+                ],
+                "regular_customer_count": 0,
+                "restaurant_info": null,
+                "scheme": "https://h5.ele.me/shop/#id=E14879063539935879807?o2o_extra_param=%7B%22rank_id%22%3A%227955c7327d35472d8fe5ea8c00b5d0d7%22%7D",
+                "status": 1,
+                "support_tags": [
+                    {
+                        "border": "dddddd",
+                        "color": "666666",
+                        "icon": "4e20966ca2a516de3f02fb9c7fd1bc6dpng",
+                        "text": "汉堡薯条",
+                        "type": 1
+                    }
+                ],
+                "supports": [
+                    {
+                        "border": "dddddd",
+                        "description": "该商家支持开发票，请在下单时填写好发票抬头",
+                        "icon_color": "666666",
+                        "icon_name": "票",
+                        "id": 4,
+                        "name": "开发票",
+                        "text_color": "666666",
+                        "two_characters_icon_name": "发票"
+                    }
+                ],
+                "target_tag_path": "d53fc0cb4dc67973038cbc591938a1b6png",
+                "theme": {
+                    "default_color": "2395ff",
+                    "header_style": 3,
+                    "hongbao_style": 0,
+                    "logo_sub": null,
+                    "price_color": "ff5339",
+                    "third_tab_name": "商家",
+                    "vanish_fields": []
+                },
+                "type": 0
+            }
+        },
+        {
+            "restaurant": {
+                "act_tag": 0,
+                "activities": [
+                    {
                         "attribute": "{32:{\"content\":\"21\",\"type\":1},72:{\"content\":\"42\",\"type\":1},108:{\"content\":\"63\",\"type\":1}}",
                         "background": {
                             "rgb_from": "#FFFFFF",

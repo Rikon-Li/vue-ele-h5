@@ -3,7 +3,7 @@
     <appScroll class="scroll">
     <div class="top">
       <div class="background" :style="{backgroundImage: 'url('+rstData.bg_path+')'}">
-        <div><span class="iconfont icon-arrow-left"></span></div>
+        <div @click="backHome" ><span class="iconfont icon-arrow-left"></span></div>
         <img class="shopLogo" :src="rstData.image_path">
       </div>
       <div class="shopDetails">
@@ -125,6 +125,9 @@ export default {
       this.transAction();
       this.$router.push('orders')
       this.setBillList();
+    },
+    backHome(){
+      this.$router.push('/');
     }
   },
   created(){
@@ -139,7 +142,7 @@ export default {
   display: block;
   width: 100%;
   height: 100%;
-  background-color: #fff;
+  background-color: #f5f5f5;
   position: relative;
   z-index: 100;
   .top{
