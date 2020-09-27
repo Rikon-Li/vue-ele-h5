@@ -1,17 +1,22 @@
-import { SHOP_API } from '../../api/url';
+import { COMMENTS_API, SHOP_API } from '../../api/url';
 import http from "../../api/http";
 export default{
   namespaced: true,
   state: {
+    shopLoading: false,
+    CommentsLoading: false,
     shopData: [],
     menuData: [],
     recommendData: [],
     rstData: [],
-    shopLoading: false,
+    commentsData: [],
   },
   mutations: {
     setShopLoading(state, payload){
       state.shopLoading = payload;
+    },
+    setCommentsLoading(state, payload){
+      state.CommentsLoading = payload;
     },
     setShopData(state, data){
       state.shopData = data;
@@ -47,23 +52,31 @@ export default{
         promotion_info: data.rst.promotion_info,
         posters_image_path: `https://cube.elemecdn.com/${data.rst.posters[0].image_hash.slice(0, 1) + '/' + data.rst.posters[0].image_hash.slice(1, 3) + '/' + data.rst.posters[0].image_hash.slice(3) + '.' + data.rst.posters[0].image_hash.match(/(jpeg|png|JPEG)/g)}?x-oss-process=image/format,webp/resize,w_130,h_130,m_fixed`,
       };
-      // console.log(state.menuData);
     },
+    setCommentsData(state, data){
+      state.commentsData = data.comments.map(item=>({
+        rating_text: item.rating_text,
+        rated_at: item.rated_at,
+        username: item.username,
+        rating: item.rating,
+        avatar: `https://cube.elemecdn.com/${item.avatar.slice(0, 1) + '/' + item.avatar.slice(1, 3) + '/' + item.avatar.slice(3) + '.' + item.avatar.match(/(jpeg|png|JPEG)/g)}?x-oss-process=image/format,webp/resize,w_30,h_30,m_fixed`,
+      }));
+    }
   },
   actions: {
     async requestShopData(context){
       context.commit('setShopLoading', true);
       const {data} = await http.get(SHOP_API);
-      // console.log(data);
-      // const result = entries.map(item=>({
-      //   id: item.id,
-      //   name: item.name,
-      //   picUrl: `https://cube.elemecdn.com/${item.image_hash}.jpeg?x-oss-process=image/format,webp/resize,w_90,h_90,m_fixed`,
-      // }));
       context.commit('setShopData',data);
-      // // 重置loading
-      // console.log(data);
       context.commit('setShopLoading', false);
-    }
+    },
+
+    async requestCommentsData(context){
+      context.commit('setCommentsLoading', true);
+      const {data} = await http.get(COMMENTS_API);
+      context.commit('setCommentsData',data);
+      console.log(data);
+      context.commit('setCommentsLoading', false);
+    },
   }
 }

@@ -1,22 +1,20 @@
-import Vue from 'vue'
-import Vuex from 'vuex'
-import home from '../store/modules/home'
-import detail from '../store/modules/detail'
-import cart from '../store/modules/cart'
+import Vue from "vue";
+import Vuex from "vuex";
+import home from "../store/modules/home";
+import detail from "../store/modules/detail";
+import cart from "../store/modules/cart";
+import user from "../store/modules/user";
 
-
-Vue.use(Vuex)
+Vue.use(Vuex);
 
 export default new Vuex.Store({
-  state: {
-  },
-  mutations: {
-  },
-  actions: {
-  },
+  state: {},
+  mutations: {},
+  actions: {},
   modules: {
     home,
     detail,
-    cart
-  }
-})
+    cart,
+    user,
+  },
+});

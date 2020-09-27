@@ -38,7 +38,7 @@ export default {
   },
   methods: {
     orderMore(){
-      this.$router.push('/')
+      this.$router.push('/detail')
     }
   }
 

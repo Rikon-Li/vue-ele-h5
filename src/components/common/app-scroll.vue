@@ -60,6 +60,7 @@ export default {
 
 <style scoped lang="scss">
 .scroll-view{
+  // height: 100%;
   overflow: hidden;
 }
 </style>

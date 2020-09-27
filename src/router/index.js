@@ -8,8 +8,14 @@ const routes = [
     path: '/',
     name: 'main',
     component: ()=>import(/* webpackChunkName: "main" */'../views/Main'),
-    redirect: '/home',
+    redirect: '/login',
     children: [
+      {
+        path: 'login',
+        name: 'login',
+        component: ()=>import(/* webpackChunkName: "login" */'../views/Login'),
+
+      },
       {
         path: 'home',
         name: 'home',

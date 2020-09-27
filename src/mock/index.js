@@ -11,3 +11,7 @@ mock('http://localhost:8080/api/restaurants',()=>{
 mock('http://localhost:8080/api/detail',()=>{
   return require('./json/detail/shop.json')
 })
+
+mock('http://localhost:8080/api/comments',()=>{
+  return require('./json/detail/comments.json')
+})

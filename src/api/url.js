@@ -5,3 +5,5 @@ export const ENTRIES_API = '/entries';
 export const RESTAURANTS_API = '/restaurants';
 
 export const SHOP_API = '/detail';
+
+export const COMMENTS_API = '/comments'

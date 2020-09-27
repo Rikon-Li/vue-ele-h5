@@ -1,0 +1,784 @@
+{
+  "comments": [
+      {
+          "avatar": "c6b8384f98b8dedfd87fc1450926648cjpeg",
+          "food_ratings": [
+              {
+                  "food_id": 200156136986,
+                  "rate_name": "堡堡双人套餐T",
+                  "rating": 2,
+                  "rating_text": "",
+                  "reply": {
+                      "content": null,
+                      "created_at": null
+                  },
+                  "sku_id": 200000553108354166,
+                  "sku_id_str": "200000553108354166",
+                  "tags": null
+              },
+              {
+                  "food_id": 2000000048729072,
+                  "rate_name": "2块香辣鸡翅(炸鸡)T",
+                  "rating": 5,
+                  "rating_text": "",
+                  "reply": {
+                      "content": null,
+                      "created_at": null
+                  },
+                  "sku_id": 300000049897498742,
+                  "sku_id_str": "300000049897498742",
+                  "tags": null
+              }
+          ],
+          "highlights": null,
+          "highlights_v2": null,
+          "is_super_vip": true,
+          "is_taobao_vip": false,
+          "order_id": 0,
+          "order_images": [],
+          "package_rating": 3,
+          "quality_rating": 3,
+          "rated_at": "2020-09-09",
+          "rating": 4,
+          "rating_text": "奥尔良鸡翅还不够味，辣椒包、蕃茄酱都没给，也是醉了",
+          "reply": {
+              "content": null,
+              "created_at": null
+          },
+          "rider_rating": 5,
+          "tags": null,
+          "time_spent_desc": "30分钟送达",
+          "username": "T***x"
+      },
+      {
+          "avatar": "c6b8384f98b8dedfd87fc1450926648cjpeg",
+          "food_ratings": [
+              {
+                  "food_id": 2000000053068018,
+                  "rate_name": "百事可乐(中)TN",
+                  "rating": 4,
+                  "rating_text": "",
+                  "reply": {
+                      "content": null,
+                      "created_at": null
+                  },
+                  "sku_id": 300000054350618742,
+                  "sku_id_str": "300000054350618742",
+                  "tags": null
+              },
+              {
+                  "food_id": 2000000061080887,
+                  "rate_name": "香卤系列可乐餐T",
+                  "rating": 4,
+                  "rating_text": "",
+                  "reply": {
+                      "content": null,
+                      "created_at": null
+                  },
+                  "sku_id": 300000062577686646,
+                  "sku_id_str": "300000062577686646",
+                  "tags": null
+              }
+          ],
+          "highlights": null,
+          "highlights_v2": null,
+          "is_super_vip": false,
+          "is_taobao_vip": false,
+          "order_id": 0,
+          "order_images": [],
+          "package_rating": 5,
+          "quality_rating": 3,
+          "rated_at": "2020-09-07",
+          "rating": 4,
+          "rating_text": "踩坑了，除了奥尔良跟炸翅，卤香的完全不好吃，唉。。",
+          "reply": {
+              "content": null,
+              "created_at": null
+          },
+          "rider_rating": 5,
+          "tags": null,
+          "time_spent_desc": "",
+          "username": "匿名用户"
+      },
+      {
+          "avatar": "c6b8384f98b8dedfd87fc1450926648cjpeg",
+          "food_ratings": [
+              {
+                  "food_id": 2000000046558888,
+                  "rate_name": "香辣鸡腿堡套餐T",
+                  "rating": 4,
+                  "rating_text": "",
+                  "reply": {
+                      "content": null,
+                      "created_at": null
+                  },
+                  "sku_id": 300000047676224630,
+                  "sku_id_str": "300000047676224630",
+                  "tags": null
+              },
+              {
+                  "food_id": 2000000023028233,
+                  "rate_name": "(一块)吮指原味鸡T",
+                  "rating": 4,
+                  "rating_text": "",
+                  "reply": {
+                      "content": null,
+                      "created_at": null
+                  },
+                  "sku_id": 300000023576488054,
+                  "sku_id_str": "300000023576488054",
+                  "tags": null
+              }
+          ],
+          "highlights": null,
+          "highlights_v2": null,
+          "is_super_vip": false,
+          "is_taobao_vip": false,
+          "order_id": 0,
+          "order_images": [
+              {
+                  "food_ids": [
+                      2000000046558888
+                  ],
+                  "food_indexes": null,
+                  "food_names": [
+                      "香辣鸡腿堡套餐T"
+                  ],
+                  "image_hash": "fc9a16507f2525a0c8216b058c155f58jpeg",
+                  "sku_ids": [
+                      300000047676224630
+                  ]
+              }
+          ],
+          "package_rating": 2,
+          "quality_rating": 3,
+          "rated_at": "2020-08-03",
+          "rating": 1,
+          "rating_text": "说了可乐不要加冰  商家根本没不看备注",
+          "reply": {
+              "content": null,
+              "created_at": null
+          },
+          "rider_rating": 3,
+          "tags": null,
+          "time_spent_desc": "20分钟送达",
+          "username": "匿名用户"
+      },
+      {
+          "avatar": "c6b8384f98b8dedfd87fc1450926648cjpeg",
+          "food_ratings": [
+              {
+                  "food_id": 910597362,
+                  "rate_name": "醇香土豆泥T",
+                  "rating": 5,
+                  "rating_text": "",
+                  "reply": {
+                      "content": null,
+                      "created_at": null
+                  },
+                  "sku_id": 532811727990,
+                  "sku_id_str": "532811727990",
+                  "tags": null
+              },
+              {
+                  "food_id": 200157143255,
+                  "rate_name": "鸡肉卷烤翅单人套餐T",
+                  "rating": 5,
+                  "rating_text": "",
+                  "reply": {
+                      "content": null,
+                      "created_at": null
+                  },
+                  "sku_id": 200000554146291830,
+                  "sku_id_str": "200000554146291830",
+                  "tags": null
+              },
+              {
+                  "food_id": 200157132960,
+                  "rate_name": "劲脆鸡腿堡豆泥餐T",
+                  "rating": 4,
+                  "rating_text": "",
+                  "reply": {
+                      "content": null,
+                      "created_at": null
+                  },
+                  "sku_id": 200000554132430966,
+                  "sku_id_str": "200000554132430966",
+                  "tags": null
+              },
+              {
+                  "food_id": 200116467877,
+                  "rate_name": "港式烧味脆皮大鸡腿饭T",
+                  "rating": 5,
+                  "rating_text": "",
+                  "reply": {
+                      "content": null,
+                      "created_at": null
+                  },
+                  "sku_id": 200000512528669814,
+                  "sku_id_str": "200000512528669814",
+                  "tags": null
+              }
+          ],
+          "highlights": null,
+          "highlights_v2": null,
+          "is_super_vip": true,
+          "is_taobao_vip": true,
+          "order_id": 0,
+          "order_images": [],
+          "package_rating": 5,
+          "quality_rating": 5,
+          "rated_at": "2020-07-03",
+          "rating": 5,
+          "rating_text": "好吃",
+          "reply": {
+              "content": null,
+              "created_at": null
+          },
+          "rider_rating": 5,
+          "tags": null,
+          "time_spent_desc": "30分钟送达",
+          "username": "4***0"
+      },
+      {
+          "avatar": "c6b8384f98b8dedfd87fc1450926648cjpeg",
+          "food_ratings": [
+              {
+                  "food_id": 200161137183,
+                  "rate_name": "2份波纹薯条(中)T",
+                  "rating": 4,
+                  "rating_text": "",
+                  "reply": {
+                      "content": null,
+                      "created_at": null
+                  },
+                  "sku_id": 200000558236224630,
+                  "sku_id_str": "200000558236224630",
+                  "tags": null
+              },
+              {
+                  "food_id": 2000000048729119,
+                  "rate_name": "10块香辣鸡翅T",
+                  "rating": 4,
+                  "rating_text": "",
+                  "reply": {
+                      "content": null,
+                      "created_at": null
+                  },
+                  "sku_id": 300000049897537654,
+                  "sku_id_str": "300000049897537654",
+                  "tags": null
+              },
+              {
+                  "food_id": 200108279981,
+                  "rate_name": "波纹霸王薯条(大)T",
+                  "rating": 5,
+                  "rating_text": "",
+                  "reply": {
+                      "content": null,
+                      "created_at": null
+                  },
+                  "sku_id": 200000504151053430,
+                  "sku_id_str": "200000504151053430",
+                  "tags": null
+              },
+              {
+                  "food_id": 200064998887,
+                  "rate_name": "冰拿铁(中)T",
+                  "rating": 4,
+                  "rating_text": "",
+                  "reply": {
+                      "content": null,
+                      "created_at": null
+                  },
+                  "sku_id": 200000459841648758,
+                  "sku_id_str": "200000459841648758",
+                  "tags": null
+              },
+              {
+                  "food_id": 2000000048732876,
+                  "rate_name": "10块奥尔良烤翅T",
+                  "rating": 5,
+                  "rating_text": "",
+                  "reply": {
+                      "content": null,
+                      "created_at": null
+                  },
+                  "sku_id": 300000049897536630,
+                  "sku_id_str": "300000049897536630",
+                  "tags": null
+              }
+          ],
+          "highlights": null,
+          "highlights_v2": null,
+          "is_super_vip": true,
+          "is_taobao_vip": true,
+          "order_id": 0,
+          "order_images": [],
+          "package_rating": 5,
+          "quality_rating": 5,
+          "rated_at": "2020-08-19",
+          "rating": 5,
+          "rating_text": "配送很快味道一般般",
+          "reply": {
+              "content": null,
+              "created_at": null
+          },
+          "rider_rating": 5,
+          "tags": null,
+          "time_spent_desc": "30分钟送达",
+          "username": "3***b"
+      },
+      {
+          "avatar": "c6b8384f98b8dedfd87fc1450926648cjpeg",
+          "food_ratings": [
+              {
+                  "food_id": 2000000053330955,
+                  "rate_name": "培根薯角chizza青年T",
+                  "rating": 4,
+                  "rating_text": "",
+                  "reply": {
+                      "content": null,
+                      "created_at": null
+                  },
+                  "sku_id": 300000054638132342,
+                  "sku_id_str": "300000054638132342",
+                  "tags": null
+              },
+              {
+                  "food_id": 2000000048729072,
+                  "rate_name": "2块香辣鸡翅(炸鸡)T",
+                  "rating": 4,
+                  "rating_text": "",
+                  "reply": {
+                      "content": null,
+                      "created_at": null
+                  },
+                  "sku_id": 300000049897498742,
+                  "sku_id_str": "300000049897498742",
+                  "tags": null
+              }
+          ],
+          "highlights": null,
+          "highlights_v2": null,
+          "is_super_vip": false,
+          "is_taobao_vip": false,
+          "order_id": 0,
+          "order_images": [
+              {
+                  "food_ids": [
+                      2000000053330955
+                  ],
+                  "food_indexes": null,
+                  "food_names": [
+                      "培根薯角chizza青年T"
+                  ],
+                  "image_hash": "a125a4dd45f9f48acf8debb9904da7edjpeg",
+                  "sku_ids": [
+                      300000054638132342
+                  ]
+              }
+          ],
+          "package_rating": 2,
+          "quality_rating": 1,
+          "rated_at": "2020-08-19",
+          "rating": 1,
+          "rating_text": "实物和图片极度不符就算了，鸡翅咸的不能吃第二口是咋回事，真的难吃。",
+          "reply": {
+              "content": null,
+              "created_at": null
+          },
+          "rider_rating": 5,
+          "tags": null,
+          "time_spent_desc": "",
+          "username": "匿名用户"
+      },
+      {
+          "avatar": "c6b8384f98b8dedfd87fc1450926648cjpeg",
+          "food_ratings": [
+              {
+                  "food_id": 2000000041464888,
+                  "rate_name": "超级炸鸡啤酒干杯桶T",
+                  "rating": 2,
+                  "rating_text": "",
+                  "reply": {
+                      "content": null,
+                      "created_at": null
+                  },
+                  "sku_id": 300000042450140278,
+                  "sku_id_str": "300000042450140278",
+                  "tags": null
+              },
+              {
+                  "food_id": 2000000053068022,
+                  "rate_name": "原味圣代（北美蓝莓酱）T",
+                  "rating": 4,
+                  "rating_text": "",
+                  "reply": {
+                      "content": null,
+                      "created_at": null
+                  },
+                  "sku_id": 300000054326281334,
+                  "sku_id_str": "300000054326281334",
+                  "tags": null
+              }
+          ],
+          "highlights": null,
+          "highlights_v2": null,
+          "is_super_vip": true,
+          "is_taobao_vip": false,
+          "order_id": 0,
+          "order_images": [],
+          "package_rating": 5,
+          "quality_rating": 2,
+          "rated_at": "2020-09-02",
+          "rating": 2,
+          "rating_text": "吃过最难吃的肯德基炸鸡翅",
+          "reply": {
+              "content": null,
+              "created_at": null
+          },
+          "rider_rating": 5,
+          "tags": null,
+          "time_spent_desc": "30分钟送达",
+          "username": "匿名用户"
+      },
+      {
+          "avatar": "c6b8384f98b8dedfd87fc1450926648cjpeg",
+          "food_ratings": [
+              {
+                  "food_id": 2000000061080887,
+                  "rate_name": "香卤系列可乐餐T",
+                  "rating": 2,
+                  "rating_text": "",
+                  "reply": {
+                      "content": null,
+                      "created_at": null
+                  },
+                  "sku_id": 300000062577686646,
+                  "sku_id_str": "300000062577686646",
+                  "tags": null
+              }
+          ],
+          "highlights": null,
+          "highlights_v2": null,
+          "is_super_vip": true,
+          "is_taobao_vip": false,
+          "order_id": 0,
+          "order_images": [],
+          "package_rating": 3,
+          "quality_rating": 1,
+          "rated_at": "2020-08-29",
+          "rating": 1,
+          "rating_text": "真的好差、那个手撕鸡全是骨头。",
+          "reply": {
+              "content": null,
+              "created_at": null
+          },
+          "rider_rating": 3,
+          "tags": null,
+          "time_spent_desc": "30分钟送达",
+          "username": "匿名用户"
+      },
+      {
+          "avatar": "c6b8384f98b8dedfd87fc1450926648cjpeg",
+          "food_ratings": [
+              {
+                  "food_id": 2000000053068021,
+                  "rate_name": "葡式蛋挞(经典)1只T",
+                  "rating": 4,
+                  "rating_text": "",
+                  "reply": {
+                      "content": null,
+                      "created_at": null
+                  },
+                  "sku_id": 300000054345779318,
+                  "sku_id_str": "300000054345779318",
+                  "tags": null
+              },
+              {
+                  "food_id": 200111087315,
+                  "rate_name": "黄金鸡块5块装T",
+                  "rating": 4,
+                  "rating_text": "",
+                  "reply": {
+                      "content": null,
+                      "created_at": null
+                  },
+                  "sku_id": 200000507022422134,
+                  "sku_id_str": "200000507022422134",
+                  "tags": null
+              },
+              {
+                  "food_id": 2000000048718932,
+                  "rate_name": "2块新奥尔良烤翅T",
+                  "rating": 4,
+                  "rating_text": "",
+                  "reply": {
+                      "content": null,
+                      "created_at": null
+                  },
+                  "sku_id": 300000049915982966,
+                  "sku_id_str": "300000049915982966",
+                  "tags": null
+              },
+              {
+                  "food_id": 2000000048729072,
+                  "rate_name": "2块香辣鸡翅(炸鸡)T",
+                  "rating": 4,
+                  "rating_text": "",
+                  "reply": {
+                      "content": null,
+                      "created_at": null
+                  },
+                  "sku_id": 300000049897498742,
+                  "sku_id_str": "300000049897498742",
+                  "tags": null
+              },
+              {
+                  "food_id": 2000000053072936,
+                  "rate_name": "1.25升装百事可乐T",
+                  "rating": 4,
+                  "rating_text": "",
+                  "reply": {
+                      "content": null,
+                      "created_at": null
+                  },
+                  "sku_id": 300000054335973494,
+                  "sku_id_str": "300000054335973494",
+                  "tags": null
+              }
+          ],
+          "highlights": null,
+          "highlights_v2": null,
+          "is_super_vip": false,
+          "is_taobao_vip": false,
+          "order_id": 0,
+          "order_images": [],
+          "package_rating": 5,
+          "quality_rating": 5,
+          "rated_at": "2020-09-15",
+          "rating": 5,
+          "rating_text": "优秀",
+          "reply": {
+              "content": null,
+              "created_at": null
+          },
+          "rider_rating": 5,
+          "tags": null,
+          "time_spent_desc": "",
+          "username": "匿名用户"
+      },
+      {
+          "avatar": "c6b8384f98b8dedfd87fc1450926648cjpeg",
+          "food_ratings": [
+              {
+                  "food_id": 2000000057712599,
+                  "rate_name": "双重有料桶T",
+                  "rating": 4,
+                  "rating_text": "",
+                  "reply": {
+                      "content": null,
+                      "created_at": null
+                  },
+                  "sku_id": 300000059106778230,
+                  "sku_id_str": "300000059106778230",
+                  "tags": null
+              }
+          ],
+          "highlights": null,
+          "highlights_v2": null,
+          "is_super_vip": false,
+          "is_taobao_vip": false,
+          "order_id": 0,
+          "order_images": [],
+          "package_rating": 5,
+          "quality_rating": 5,
+          "rated_at": "2020-08-21",
+          "rating": 5,
+          "rating_text": "非常好  很不错",
+          "reply": {
+              "content": null,
+              "created_at": null
+          },
+          "rider_rating": 5,
+          "tags": null,
+          "time_spent_desc": "30分钟送达",
+          "username": "3***d"
+      },
+      {
+          "avatar": "c6b8384f98b8dedfd87fc1450926648cjpeg",
+          "food_ratings": [
+              {
+                  "food_id": 2000000048729119,
+                  "rate_name": "10块香辣鸡翅T",
+                  "rating": 2,
+                  "rating_text": "",
+                  "reply": {
+                      "content": null,
+                      "created_at": null
+                  },
+                  "sku_id": 300000049897537654,
+                  "sku_id_str": "300000049897537654",
+                  "tags": null
+              }
+          ],
+          "highlights": null,
+          "highlights_v2": null,
+          "is_super_vip": true,
+          "is_taobao_vip": false,
+          "order_id": 0,
+          "order_images": [],
+          "package_rating": 1,
+          "quality_rating": 1,
+          "rated_at": "2020-09-06",
+          "rating": 1,
+          "rating_text": "是不看备注的嘛，我记得肯定鸡的香辣粉是不要钱的吧，一包也不放，要钱你告诉我丫，我下单就是了，招呼都没有，很差的体验",
+          "reply": {
+              "content": null,
+              "created_at": null
+          },
+          "rider_rating": 5,
+          "tags": null,
+          "time_spent_desc": "30分钟送达",
+          "username": "匿名用户"
+      },
+      {
+          "avatar": "5f9b44bc79ffd25816c2522eec499e4ejpeg",
+          "food_ratings": [
+              {
+                  "food_id": 2000000005469766,
+                  "rate_name": "芝士猪柳帕尼尼套餐T",
+                  "rating": 4,
+                  "rating_text": "",
+                  "reply": {
+                      "content": null,
+                      "created_at": null
+                  },
+                  "sku_id": 300000005629252726,
+                  "sku_id_str": "300000005629252726",
+                  "tags": null
+              },
+              {
+                  "food_id": 2000000061518202,
+                  "rate_name": "芝士鸡肉帕尼尼咖啡T",
+                  "rating": 4,
+                  "rating_text": "",
+                  "reply": {
+                      "content": null,
+                      "created_at": null
+                  },
+                  "sku_id": 300000062994183286,
+                  "sku_id_str": "300000062994183286",
+                  "tags": null
+              }
+          ],
+          "highlights": null,
+          "highlights_v2": null,
+          "is_super_vip": true,
+          "is_taobao_vip": false,
+          "order_id": 0,
+          "order_images": [],
+          "package_rating": 5,
+          "quality_rating": 5,
+          "rated_at": "2020-09-08",
+          "rating": 5,
+          "rating_text": "好吃",
+          "reply": {
+              "content": null,
+              "created_at": null
+          },
+          "rider_rating": 5,
+          "tags": null,
+          "time_spent_desc": "30分钟送达",
+          "username": "许***5"
+      },
+      {
+          "avatar": "621f1efe01b3fa3d6b3477937c3ac388jpeg",
+          "food_ratings": [
+              {
+                  "food_id": 2000000079235178,
+                  "rate_name": "炸小串辣翅餐T",
+                  "rating": 5,
+                  "rating_text": "炸小串辣翅餐T 不好吃……",
+                  "reply": {
+                      "content": null,
+                      "created_at": null
+                  },
+                  "sku_id": 300000081146253430,
+                  "sku_id_str": "300000081146253430",
+                  "tags": null
+              }
+          ],
+          "highlights": null,
+          "highlights_v2": {
+              "炸小串辣翅餐T": 300000081146253430
+          },
+          "is_super_vip": true,
+          "is_taobao_vip": false,
+          "order_id": 0,
+          "order_images": [],
+          "package_rating": 5,
+          "quality_rating": 3,
+          "rated_at": "2020-09-26",
+          "rating": 5,
+          "rating_text": "炸小串辣翅餐T 不好吃……",
+          "reply": {
+              "content": null,
+              "created_at": null
+          },
+          "rider_rating": 5,
+          "tags": null,
+          "time_spent_desc": "30分钟送达",
+          "username": "B***言"
+      }
+  ],
+  "rating": {
+      "compare_rating": 0.688911704312115,
+      "deliver_time": 30.0,
+      "fixedCompareRating": "68.9%",
+      "fixedFoodScore": "4.64",
+      "fixedPackageScore": "4.64",
+      "fixedRiderGoodRate": "93%",
+      "fixedRiderScore": "4.92",
+      "fixedShopScore": "4.51",
+      "fixedTasteScore": "4.48",
+      "food_score": 4.642859935760498,
+      "item_good_score": 0.9137930274009705,
+      "order_rating_amount": 1319,
+      "overall_score": 4.517859935760498,
+      "package_score": 4.642859935760498,
+      "rider_good_rate": 0.93529,
+      "rider_score": 4.928569793701172,
+      "service_score": 4.482140064239502,
+      "shop_score": 4.517859935760498,
+      "taste_score": 4.482140064239502
+  },
+  "tags": [
+      {
+          "count": 1319,
+          "name": "全部",
+          "unsatisfied": false
+      },
+      {
+          "count": -1,
+          "name": "最新",
+          "unsatisfied": false
+      },
+      {
+          "count": 1214,
+          "name": "好评",
+          "unsatisfied": false
+      },
+      {
+          "count": 53,
+          "name": "差评",
+          "unsatisfied": true
+      },
+      {
+          "count": 38,
+          "name": "有图",
+          "unsatisfied": false
+      }
+  ]
+}
